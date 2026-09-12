@@ -56,3 +56,18 @@ def test_docx_paragraphs_and_tables():
     sections = extract(output.getvalue(), "policy.docx")
     assert "Annual leave" in sections[0]["text"]
     assert "Carryover | 5 days" in sections[1]["text"]
+
+
+def test_docx_table_header_context_and_body_order():
+    document = Document()
+    document.add_paragraph("Service plans")
+    table = document.add_table(rows=3, cols=2)
+    for row, values in zip(table.rows, [("Plan", "Response time"), ("Basic", "48 hours"), ("Priority", "4 hours")]):
+        for cell, value in zip(row.cells, values):
+            cell.text = value
+    document.add_paragraph("Contact the service desk.")
+    output = io.BytesIO()
+    document.save(output)
+    sections = extract(output.getvalue(), "plans.docx")
+    assert [s["location"] for s in sections] == ["Paragraph 1", "Table 1, row 2", "Table 1, row 3", "Paragraph 2"]
+    assert sections[2]["text"] == "Plan | Response time\nPriority | 4 hours"

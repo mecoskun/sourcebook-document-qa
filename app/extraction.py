@@ -4,6 +4,7 @@ import zipfile
 from pathlib import Path
 
 from docx import Document
+from docx.table import Table
 from pypdf import PdfReader
 
 from app.config import settings
@@ -44,12 +45,25 @@ def extract(data: bytes, filename: str) -> list[dict]:
                 if "word/document.xml" not in archive.namelist():
                     raise ValueError("This does not appear to be a DOCX file.")
             document = Document(io.BytesIO(data))
-            blocks = [p.text for p in document.paragraphs]
-            blocks += [" | ".join(cell.text for cell in row.cells)
-                       for table in document.tables for row in table.rows]
-            # DOCX does not have stable page numbers without a layout engine.
-            sections = [{"location": f"Paragraph {i}", "text": text}
-                        for i, text in enumerate(blocks, 1) if text.strip()]
+            # Preserve body order and table headers so values retain their context.
+            sections = []
+            paragraph_number = table_number = 0
+            for block in document.iter_inner_content():
+                if isinstance(block, Table):
+                    table_number += 1
+                    rows = [" | ".join(cell.text for cell in row.cells) for row in block.rows]
+                    if rows:
+                        for row_number, row in enumerate(rows[1:], 2):
+                            sections.append({"location": f"Table {table_number}, row {row_number}",
+                                             "text": rows[0] + "\n" + row})
+                        if len(rows) == 1:
+                            sections.append({"location": f"Table {table_number}, row 1",
+                                             "text": rows[0]})
+                else:
+                    paragraph_number += 1
+                    if block.text.strip():
+                        sections.append({"location": f"Paragraph {paragraph_number}",
+                                         "text": block.text})
         elif extension == ".txt":
             text = data.decode("utf-8-sig")
             sections = [{"location": f"Section {i}", "text": text}

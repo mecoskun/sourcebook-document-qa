@@ -1,0 +1,202 @@
+{
+  "note": "Synthetic format, citation-location and wording checks; not a general accuracy benchmark.",
+  "cases": 12,
+  "passed": 12,
+  "results": [
+    {
+      "file": "plans.docx",
+      "question": "What is the response target for the Priority plan?",
+      "passed": true,
+      "seconds": 4.54,
+      "answer": "4 hours [S1]",
+      "sources": [
+        {
+          "document_id": "56ee38962309426e8cf0cf4ee0f52c1d",
+          "name": "plans.docx",
+          "location": "Table 1, row 3",
+          "text": "Plan | Response target\nPriority | 4 hours",
+          "score": 0.943,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 4538
+    },
+    {
+      "file": "plans.docx",
+      "question": "How long does Basic support take to respond?",
+      "passed": true,
+      "seconds": 5.3,
+      "answer": "Basic support has a response target of 48 hours [S1]",
+      "sources": [
+        {
+          "document_id": "56ee38962309426e8cf0cf4ee0f52c1d",
+          "name": "plans.docx",
+          "location": "Table 1, row 2",
+          "text": "Plan | Response target\nBasic | 48 hours",
+          "score": 0.9029,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 5299
+    },
+    {
+      "file": "plans.docx",
+      "question": "What is the weekend response target?",
+      "passed": true,
+      "seconds": 6.45,
+      "answer": "No weekend response target is specified. [S2]",
+      "sources": [
+        {
+          "document_id": "56ee38962309426e8cf0cf4ee0f52c1d",
+          "name": "plans.docx",
+          "location": "Paragraph 2",
+          "text": "Targets apply on business days. No weekend response target is specified.",
+          "score": 0.9064,
+          "label": "S2"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 6442,
+      "review": "Exact cited statement of missing policy; accepted without changing model output."
+    },
+    {
+      "file": "returns.pdf",
+      "question": "How long do I have to request an equipment return?",
+      "passed": true,
+      "seconds": 4.39,
+      "answer": "14 days from delivery [S1]",
+      "sources": [
+        {
+          "document_id": "0723e42a15fb4b168a4ea6cae621613d",
+          "name": "returns.pdf",
+          "location": "Page 1",
+          "text": "Equipment returns must be requested within 14 days of delivery.",
+          "score": 0.9255,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 4382
+    },
+    {
+      "file": "returns.pdf",
+      "question": "What do I need before shipping equipment back?",
+      "passed": true,
+      "seconds": 4.78,
+      "answer": "A return authorization number is required before shipping equipment back. [S1]",
+      "sources": [
+        {
+          "document_id": "0723e42a15fb4b168a4ea6cae621613d",
+          "name": "returns.pdf",
+          "location": "Page 2",
+          "text": "A return authorization number is required before shipping equipment back.",
+          "score": 0.9183,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 4776
+    },
+    {
+      "file": "returns.pdf",
+      "question": "What is the equipment refund amount?",
+      "passed": true,
+      "seconds": 1.55,
+      "answer": "I couldn't find enough evidence in your documents to answer that question.",
+      "sources": [],
+      "mode": "abstained",
+      "elapsed_ms": 1547
+    },
+    {
+      "file": "access.txt",
+      "question": "How long is a visitor badge valid?",
+      "passed": true,
+      "seconds": 4.88,
+      "answer": "Visitor badges expire after 72 hours. [S1]",
+      "sources": [
+        {
+          "document_id": "63cfa87db21749328e9c928021cd390a",
+          "name": "access.txt",
+          "location": "Section 1",
+          "text": "Visitor badges expire after 72 hours.",
+          "score": 0.9355,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 4878
+    },
+    {
+      "file": "access.txt",
+      "question": "where do visitors check in",
+      "passed": true,
+      "seconds": 4.41,
+      "answer": "Visitors check in at reception [S1]",
+      "sources": [
+        {
+          "document_id": "63cfa87db21749328e9c928021cd390a",
+          "name": "access.txt",
+          "location": "Section 2",
+          "text": "Visitors must check in at reception before entering the lab.",
+          "score": 0.8795,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 4401
+    },
+    {
+      "file": "access.txt",
+      "question": "What does a visitor badge cost?",
+      "passed": true,
+      "seconds": 1.85,
+      "answer": "I couldn't find enough evidence in your documents to answer that question.",
+      "sources": [],
+      "mode": "abstained",
+      "elapsed_ms": 1841
+    },
+    {
+      "file": "handbook.txt",
+      "question": "when does employee earn vacation",
+      "passed": true,
+      "seconds": 7.47,
+      "answer": "Vacation becomes available after six months of employment [S1]",
+      "sources": [
+        {
+          "document_id": "c7552b7295774765bb7b9212bc6beba6",
+          "name": "handbook.txt",
+          "location": "Section 2",
+          "text": "ANNUAL LEAVE\nFull-time employees receive 20 paid vacation days per calendar year. Vacation becomes available after six months of employment. Up to five unused vacation days may be carried into the following year. Submit vacation requests through the HR portal at least two weeks in advance. Requests require approval from your manager.",
+          "score": 0.9069,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 7467
+    },
+    {
+      "file": "handbook.txt",
+      "question": "How many vacation days accrue per month?",
+      "passed": true,
+      "seconds": 1.89,
+      "answer": "I couldn't find enough evidence in your documents to answer that question.",
+      "sources": [],
+      "mode": "abstained",
+      "elapsed_ms": 1881
+    },
+    {
+      "file": "handbook.txt",
+      "question": "What year was Northstar Studio founded?",
+      "passed": true,
+      "seconds": 1.59,
+      "answer": "I couldn't find enough evidence in your documents to answer that question.",
+      "sources": [],
+      "mode": "abstained",
+      "elapsed_ms": 1585
+    }
+  ],
+  "initial_passed": 11,
+  "review_note": "One initially flagged answer exactly quoted the cited statement that no weekend target is specified. Acceptance now includes this safe explicit-absence answer; inference outputs are unchanged."
+}

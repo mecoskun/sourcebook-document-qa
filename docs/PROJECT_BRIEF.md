@@ -15,3 +15,7 @@ Accept a video URL, retrieve its existing transcript through MCP, summarize the 
 ## Boundaries
 
 GitHub Pages cannot run Python. Public frontend configuration contains only the backend origin. The backend mediates inference; model ports stay private. Uploads and embeddings are temporary and isolated by unguessable session tokens. CPU latency and small-model quality need evaluation before hosting selection. Keep sample-only public previews explicitly labeled until the live backend is deployed.
+
+## Continuing work
+
+See [ROADMAP.md](ROADMAP.md) for the approved six-step sequence and current status. Step 1, Document Q&A reliability, is active; hosting and YouTube remain pending.

@@ -132,3 +132,9 @@ Inspired by the MCP teaching examples in [Dave Ebbelaar's AI Cookbook](https://g
 ### Informal question wording regression
 
 A follow-up fix restricts verification to cited evidence and distinguishes informal eligibility questions from explicit accrual questions. The exact question "when does employee earn vacation" now returns the documented six-month availability rule. All eight focused live checks passed; see `docs/wording-regression.json`. These supplement the earlier 20-case baseline; they do not replace it or establish general accuracy.
+
+### Broader format reliability pass
+
+Run `uv run python scripts/evaluate_reliability.py` with the backend/model running. It creates synthetic DOCX, two-page PDF, and TXT uploads and checks answers and citation locations through the real API/MCP path. The 12 recorded cases cover tables, informal wording, missing facts, and a document instruction attempting to alter a fact. All 12 are accepted after review of one exact cited missing-policy answer; the original 11/12 automated count and unchanged outputs are retained in `docs/reliability-results.json`. Offline suite: 25 tests.
+
+DOCX extraction preserves paragraph/table order and repeats each table's first row as context for subsequent rows. Citations identify table and row. This assumes the first row is useful header context; complex, merged, nested, or unusually large tables need broader validation. These synthetic fixtures do not substitute for representative real documents. Future phases and resume notes are in `docs/ROADMAP.md`.
