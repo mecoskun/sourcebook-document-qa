@@ -128,3 +128,7 @@ Without a backend origin, the public Pages interface enters a clearly labeled **
 ## Credits
 
 Inspired by the MCP teaching examples in [Dave Ebbelaar's AI Cookbook](https://github.com/daveebbelaar/ai-cookbook/tree/main/mcp). This is a separate implementation with an upload pipeline, isolated sessions, a web interface, local generation, and tests. Third-party libraries and model assets retain their respective licenses; model binaries are downloaded separately, not redistributed in this repository.
+
+### Informal question wording regression
+
+A follow-up fix restricts verification to cited evidence and distinguishes informal eligibility questions from explicit accrual questions. The exact question "when does employee earn vacation" now returns the documented six-month availability rule. All eight focused live checks passed; see `docs/wording-regression.json`. These supplement the earlier 20-case baseline; they do not replace it or establish general accuracy.
