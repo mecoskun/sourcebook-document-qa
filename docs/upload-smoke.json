@@ -1,0 +1,9 @@
+{
+  "support.txt": "indexed",
+  "support.docx": "indexed",
+  "support.pdf": "indexed",
+  "cross_session_list_delete_question": "isolated",
+  "malformed_pdf": "rejected",
+  "oversized_upload": "rejected",
+  "clear_workspace": "deleted"
+}

@@ -1,0 +1,25 @@
+[project]
+name = "document-qa"
+version = "0.1.0"
+description = "Evidence-based document answers with MCP retrieval and a self-hosted language model"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+  "fastapi>=0.115,<1", "uvicorn>=0.34,<1", "mcp>=1.12,<2",
+  "httpx>=0.28,<1", "python-multipart>=0.0.20,<1", "pydantic-settings>=2.8,<3",
+  "fastembed>=0.6,<1", "numpy>=2,<3", "pypdf>=5,<7", "python-docx>=1.1,<2",
+]
+
+[dependency-groups]
+dev = ["pytest>=8,<10", "pytest-asyncio>=0.25,<2", "ruff>=0.11,<1"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]

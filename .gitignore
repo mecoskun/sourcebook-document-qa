@@ -1,0 +1,11 @@
+.venv/
+.uv-cache/
+.runtime/
+.data/
+.models/
+.env
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+frontend/config.local.js

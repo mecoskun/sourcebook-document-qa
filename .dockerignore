@@ -1,0 +1,7 @@
+*
+!app/**
+!frontend/**
+!samples/**
+!pyproject.toml
+!uv.lock
+app/**/__pycache__/

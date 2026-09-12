@@ -1,0 +1,20 @@
+NORTHSTAR STUDIO — EMPLOYEE HANDBOOK
+Fictional sample document for the Sourcebook portfolio demo. Effective 1 January 2026.
+
+ANNUAL LEAVE
+Full-time employees receive 20 paid vacation days per calendar year. Vacation becomes available after six months of employment. Up to five unused vacation days may be carried into the following year. Submit vacation requests through the HR portal at least two weeks in advance. Requests require approval from your manager.
+
+REMOTE WORK
+Employees may work remotely up to three days per week. Agree remote days with your team and obtain your manager's approval. Core collaboration hours are 10:00 AM to 3:00 PM Eastern Time. Remote work requires a stable internet connection and a dedicated workspace.
+
+EXPENSES
+Submit expense reports within 30 days of the purchase through the expense management portal. Include receipts, an expense category, and a short business justification. Every report requires manager approval. Purchases above $100 require additional supporting documentation.
+
+SOFTWARE LICENSES
+Request new software through the IT Service Desk. Include the product name, version, and business justification. Standard requests are usually reviewed within two business days. Specialized software may require department-head approval and take up to five business days.
+
+SECURITY INCIDENTS
+Report suspected security incidents immediately to the Security Team. Record the time, the affected systems, and what you observed. Do not attempt to investigate independently. The Security Team coordinates the response.
+
+SCOPE
+This handbook does not specify salaries, parental leave, medical insurance, or international tax rules. Contact the appropriate team for policies not included here.

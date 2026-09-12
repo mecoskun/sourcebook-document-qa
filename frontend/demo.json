@@ -1,0 +1,34 @@
+{
+  "prepared": true,
+  "description": "Recorded CPU-model answers for a fictional sample; no live inference.",
+  "answers": {
+    "How many vacation days do employees get?": {
+      "answer": "Full-time employees receive 20 paid vacation days per calendar year. [S1]",
+      "sources": [
+        {
+          "name": "Employee handbook.txt",
+          "location": "Section 2",
+          "text": "ANNUAL LEAVE\nFull-time employees receive 20 paid vacation days per calendar year. Vacation becomes available after six months of employment. Up to five unused vacation days may be carried into the following year. Submit vacation requests through the HR portal at least two weeks in advance. Requests require approval from your manager.",
+          "score": 0.9312,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 8213
+    },
+    "When do I need to submit my expense report?": {
+      "answer": "Submit expense reports within 30 days of the purchase through the expense management portal. [S1]",
+      "sources": [
+        {
+          "name": "Employee handbook.txt",
+          "location": "Section 4",
+          "text": "EXPENSES\nSubmit expense reports within 30 days of the purchase through the expense management portal. Include receipts, an expense category, and a short business justification. Every report requires manager approval. Purchases above $100 require additional supporting documentation.",
+          "score": 0.9027,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 7282
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "runtime": {
+    "version": "b10917",
+    "asset": "llama-b10917-bin-win-cpu-x64.zip",
+    "sha256": "d36f855006035745a09c426e6c542a0907faaf2a300319a1cd395e494e7d69ee"
+  },
+  "embedding": {
+    "name": "BAAI/bge-small-en",
+    "url": "https://storage.googleapis.com/qdrant-fastembed/BAAI-bge-small-en.tar.gz",
+    "sha256": "e394127565aa1454fe7190ae3a12401eee1fcdbcb09776cb55a54e75e12f7bab"
+  },
+  "model": {
+    "registry": "https://registry.ollama.ai/v2/library/qwen3",
+    "tag": "4b",
+    "digest": "sha256:3e4cb14174460404e7a233e531675303b2fbf7749c02f91864fe311ab6344e4f",
+    "sha256": "3e4cb14174460404e7a233e531675303b2fbf7749c02f91864fe311ab6344e4f"
+  }
+}

@@ -1,0 +1,43 @@
+name: Publish interface
+on:
+  workflow_dispatch:
+    inputs:
+      backend_url:
+        description: 'HTTPS backend origin (leave empty for interface-only preview)'
+        required: false
+        type: string
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure public backend address
+        env:
+          BACKEND_URL: ${{ inputs.backend_url }}
+        run: |
+          python - <<'PY'
+          import json, os
+          from pathlib import Path
+          from urllib.parse import urlparse
+          value = os.environ.get('BACKEND_URL', '').rstrip('/')
+          parsed = urlparse(value)
+          if value and (parsed.scheme != 'https' or not parsed.netloc or parsed.username or parsed.password or parsed.path or parsed.query or parsed.fragment):
+              raise SystemExit('Supply an HTTPS origin without credentials, path, query, or fragment')
+          Path('frontend/config.js').write_text('window.SOURCEBOOK_API = ' + json.dumps(value) + ';\n')
+          PY
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: frontend
+      - uses: actions/deploy-pages@v4
+        id: deployment

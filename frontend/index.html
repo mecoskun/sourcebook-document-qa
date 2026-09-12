@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sourcebook — Document Q&A</title>
+  <meta name="description" content="Ask your documents a question. Read the answer alongside the passages that support it.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <header><a class="brand" href="./"><span class="brand-icon">S</span> Sourcebook<span class="brand-detail">DOCUMENT Q&A</span></a><span class="connection" id="connection">Connecting…</span></header>
+  <main>
+    <section class="intro"><p class="eyebrow">FROM DOCUMENT TO UNDERSTANDING</p><h1>Answers you can trace.</h1><p>Ask a question. Check the evidence. Keep the source in view.</p></section>
+    <div class="workspace">
+      <aside class="library panel">
+        <div class="section-heading"><h2>Your documents</h2><span class="count" id="document-count">0 / 5</span></div>
+        <label class="drop-zone" id="drop-zone" for="file-input"><span class="upload-icon" aria-hidden="true">↑</span><strong>Add a document</strong><span>Drop a file here or browse</span><small>PDF, DOCX or TXT · up to 10 MB</small><input id="file-input" type="file" accept=".pdf,.docx,.txt"></label>
+        <p class="muted" id="upload-progress" role="status"></p>
+        <div id="documents" class="documents"><p class="empty-library">Your sources will appear here.</p></div>
+        <div class="sample"><p class="eyebrow">JUST EXPLORING?</p><h3>Try the employee handbook</h3><p>A fictional company’s leave, remote work, and expenses policies.</p><button id="sample-button" class="secondary">Load sample document <span aria-hidden="true">↗</span></button></div>
+        <p class="privacy">Temporary workspace. Documents expire after one hour. Use non-sensitive files for this portfolio demo.</p>
+        <button id="clear-button" class="text-button" disabled>Clear my workspace</button>
+      </aside>
+      <section class="conversation panel" aria-label="Ask your documents">
+        <div class="section-heading"><h2>Ask your documents</h2><span class="tag">WITH SOURCES</span></div>
+        <div id="messages" class="messages" aria-live="polite">
+          <div class="welcome" id="welcome"><span class="quote-mark" aria-hidden="true">“</span><h3>A good answer starts<br>with a source.</h3><p>Add a document or load the sample.<br>Then ask what you’d like to know.</p></div>
+        </div>
+        <div class="suggestions"><button data-question="How many vacation days do employees get?">How much annual leave is available?</button><button data-question="When do I need to submit my expense report?">When do I need to submit my expense report?</button></div>
+        <form id="question-form"><label class="sr-only" for="question">Your question</label><div class="composer"><textarea id="question" rows="2" maxlength="1000" placeholder="Ask a question about your documents…" required disabled></textarea><button id="ask-button" class="primary" type="submit" disabled>Ask <span aria-hidden="true">↗</span></button></div><p class="composer-note">Answers use your documents. Open a source to verify the details.</p></form>
+      </section>
+    </div>
+    <p id="notice" role="status" class="notice" hidden></p>
+    <footer><span>Sourcebook · An MCP + RAG portfolio project</span><span>Self-hosted inference · No paid LLM API</span></footer>
+  </main>
+</body>
+</html>
