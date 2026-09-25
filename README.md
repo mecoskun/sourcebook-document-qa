@@ -65,7 +65,7 @@ Uploads are parsed into text sections and indexed by the MCP `index_document` to
 
 The model returns structured statements with supporting source IDs. The backend rejects unknown/missing IDs and attaches citation markers itself. **Valid IDs do not prove that a claim is supported:** model faithfulness remains an evaluation concern. Similarity is a ranking signal, not a calibrated confidence percentage.
 
-A conservative similarity threshold filters weak matches, and a second model call checks whether the drafted statements follow from their evidence. This is an additional guard, not an independent factual guarantee: the checker uses the same small model. The threshold is calibrated on the sample fixture and needs wider validation on real document types.
+Retrieval combines semantic similarity with rare query-word overlap and lightweight English word-ending normalization. The semantic threshold is 0.80; candidates down to 0.75 also need two matching content terms. A second model call checks whether drafted statements follow from cited evidence, address the whole question, and avoid ignoring contradictions in other retrieved passages. This is an additional guard, not an independent factual guarantee: the checker uses the same small model. These ranking constants were exercised on the handbook and the public NIST fixture; they are not calibrated probabilities and need broader validation for other domains.
 
 `app/model.py` is the reusable inference adapter for the future transcript-only YouTube project. Its endpoint can point to one shared private model service. No OpenAI account/key is needed despite the compatible HTTP request format.
 
@@ -137,4 +137,14 @@ A follow-up fix restricts verification to cited evidence and distinguishes infor
 
 Run `uv run python scripts/evaluate_reliability.py` with the backend/model running. It creates synthetic DOCX, two-page PDF, and TXT uploads and checks answers and citation locations through the real API/MCP path. The 12 recorded cases cover tables, informal wording, missing facts, and a document instruction attempting to alter a fact. All 12 are accepted after review of one exact cited missing-policy answer; the original 11/12 automated count and unchanged outputs are retained in `docs/reliability-results.json`. Offline suite: 25 tests.
 
-DOCX extraction preserves paragraph/table order and repeats each table's first row as context for subsequent rows. Citations identify table and row. This assumes the first row is useful header context; complex, merged, nested, or unusually large tables need broader validation. These synthetic fixtures do not substitute for representative real documents. Future phases and resume notes are in `docs/ROADMAP.md`.
+DOCX extraction preserves paragraph/table order and repeats each table's first row as context for subsequent rows. Citations identify table and row. This assumes the first row is useful header context. Merged and nested DOCX tables are rejected with an explanation because the current parser cannot interpret them reliably. Unusually large tables and complex PDF layouts remain limitations. These synthetic fixtures do not substitute for representative real documents. Future phases and resume notes are in `docs/ROADMAP.md`.
+
+### Pre-hosting acceptance checks
+
+Run `uv run python scripts/evaluate_prehosting.py`. The runner downloads one checksum-pinned public NIST SP 1300 PDF into ignored `.runtime/`, then exercises it alongside a long synthetic DOCX and conflicting policy fixtures. Reports are retained under `docs/prehosting-*.json`. Source: https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1300.pdf . The nine-page guide is a real public document; the long DOCX and conflict cases are controlled synthetic fixtures.
+
+Short context-dependent questions such as “When does it open?” now ask the user to name the subject. This is a deliberately narrow grammar guard, not a general ambiguity detector. Questions remain independent; chat history is not supplied to the model. Conflicting policies may produce a cautious refusal rather than a complete comparison. Verification can detect only conflicts in retrieved passages, not every passage in every uploaded document.
+
+### Pre-hosting review completed
+
+See [docs/PREHOSTING_REVIEW.md](docs/PREHOSTING_REVIEW.md) for results and known limits. Offline tests: 41 passed; pre-hosting acceptance: 13/13; format cases: 12/12. A later handbook rerun exposed a founding-date error, now covered by a deterministic missing-origin-evidence guard and four passing targeted API cases. Failed runs remain in the repository; these separate suites are not a single general accuracy score. Next phase: CPU hosting benchmarking.

@@ -3,7 +3,7 @@ import json
 import httpx
 import pytest
 
-from app.model import LocalModel
+from app.model import LocalModel, needs_subject
 
 SOURCE = {"label": "S1", "text": "Employees get 20 vacation days.", "name": "policy.txt"}
 
@@ -37,3 +37,26 @@ async def test_no_evidence_never_calls_model():
         assert result["sources"] == []
     finally:
         await model.client.aclose()
+
+
+@pytest.mark.parametrize("question", ["When does it open?", "where do they start", "How much is it?", "How much does that cost?"])
+async def test_context_dependent_question_requests_subject_without_model_call(question):
+    model = LocalModel()
+    await model.client.aclose()
+    result = await model.answer(question, [SOURCE])
+    assert result["reason"] == "clarification_needed"
+    assert result["sources"] == []
+
+
+@pytest.mark.parametrize("question", ["When does the laboratory open?", "When does it open according to the lab policy?", "How much does a badge cost?", "When does employee earn vacation?"])
+def test_explicit_subject_questions_are_not_blocked(question):
+    assert not needs_subject(question)
+
+
+@pytest.mark.parametrize("question", ["What year was Northstar founded?", "When was this company established?", "What is its incorporation date?"])
+async def test_document_date_is_not_company_origin_evidence(question):
+    model = LocalModel()
+    await model.client.aclose()
+    result = await model.answer(question, [{"label": "S1", "text": "Handbook effective January 2026."}])
+    assert result["reason"] == "missing_event_evidence"
+    assert result["mode"] == "abstained"

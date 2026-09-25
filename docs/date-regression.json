@@ -1,0 +1,62 @@
+{
+  "cases": 4,
+  "passed": 4,
+  "results": [
+    {
+      "fixture": "NORTHSTAR STUDIO \u2014 EMPLOYEE HANDBOOK\nFictional sample document for the Sourcebook portfolio demo. Effective 1 January 2026.\n\nANNUAL LEAVE\nFull-time employees receive 20 paid vacation days per calendar year. Vacation becomes available after six months of employment. Up to five unused vacation days may be carried into the following year. Submit vacation requests through the HR portal at least two weeks in advance. Requests require approval from your manager.\n\nREMOTE WORK\nEmployees may work remotely up to three days per week. Agree remote days with your team and obtain your manager's approval. Core collaboration hours are 10:00 AM to 3:00 PM Eastern Time. Remote work requires a stable internet connection and a dedicated workspace.\n\nEXPENSES\nSubmit expense reports within 30 days of the purchase through the expense management portal. Include receipts, an expense category, and a short business justification. Every report requires manager approval. Purchases above $100 require additional supporting documentation.\n\nSOFTWARE LICENSES\nRequest new software through the IT Service Desk. Include the product name, version, and business justification. Standard requests are usually reviewed within two business days. Specialized software may require department-head approval and take up to five business days.\n\nSECURITY INCIDENTS\nReport suspected security incidents immediately to the Security Team. Record the time, the affected systems, and what you observed. Do not attempt to investigate independently. The Security Team coordinates the response.\n\nSCOPE\nThis handbook does not specify salaries, parental leave, medical insurance, or international tax rules. Contact the appropriate team for policies not included here.\n",
+      "question": "What year was Northstar Studio founded?",
+      "passed": true,
+      "answer": "The retrieved passages do not state when the organization was founded. A document's effective or publication date does not establish that.",
+      "sources": [],
+      "mode": "abstained",
+      "reason": "missing_event_evidence",
+      "elapsed_ms": 7
+    },
+    {
+      "fixture": "This handbook is effective 1 January 2026.",
+      "question": "When was the company founded?",
+      "passed": true,
+      "answer": "The retrieved passages do not state when the organization was founded. A document's effective or publication date does not establish that.",
+      "sources": [],
+      "mode": "abstained",
+      "reason": "missing_event_evidence",
+      "elapsed_ms": 6
+    },
+    {
+      "fixture": "This handbook is effective 1 January 2026.",
+      "question": "When is the handbook effective?",
+      "passed": true,
+      "answer": "1 January 2026 [S1]",
+      "sources": [
+        {
+          "document_id": "e255b9e426e741dcaf028e44aa16ae41",
+          "name": "dates.txt",
+          "location": "Section 1",
+          "text": "This handbook is effective 1 January 2026.",
+          "score": 0.8892,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 4475
+    },
+    {
+      "fixture": "Northstar was founded in 2019. This handbook is effective 1 January 2026.",
+      "question": "When was Northstar founded?",
+      "passed": true,
+      "answer": "Northstar was founded in 2019. [S1]",
+      "sources": [
+        {
+          "document_id": "36e496ddf1e843d59e0a42bfe863c672",
+          "name": "dates.txt",
+          "location": "Section 1",
+          "text": "Northstar was founded in 2019. This handbook is effective 1 January 2026.",
+          "score": 0.9192,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 5197
+    }
+  ]
+}

@@ -7,11 +7,11 @@
       "file": "plans.docx",
       "question": "What is the response target for the Priority plan?",
       "passed": true,
-      "seconds": 4.54,
+      "seconds": 7.54,
       "answer": "4 hours [S1]",
       "sources": [
         {
-          "document_id": "56ee38962309426e8cf0cf4ee0f52c1d",
+          "document_id": "bd3d31ee762c441bb8aa03a4634d9c95",
           "name": "plans.docx",
           "location": "Table 1, row 3",
           "text": "Plan | Response target\nPriority | 4 hours",
@@ -20,17 +20,17 @@
         }
       ],
       "mode": "generated",
-      "elapsed_ms": 4538
+      "elapsed_ms": 7536
     },
     {
       "file": "plans.docx",
       "question": "How long does Basic support take to respond?",
       "passed": true,
-      "seconds": 5.3,
+      "seconds": 8.22,
       "answer": "Basic support has a response target of 48 hours [S1]",
       "sources": [
         {
-          "document_id": "56ee38962309426e8cf0cf4ee0f52c1d",
+          "document_id": "bd3d31ee762c441bb8aa03a4634d9c95",
           "name": "plans.docx",
           "location": "Table 1, row 2",
           "text": "Plan | Response target\nBasic | 48 hours",
@@ -39,37 +39,36 @@
         }
       ],
       "mode": "generated",
-      "elapsed_ms": 5299
+      "elapsed_ms": 8212
     },
     {
       "file": "plans.docx",
       "question": "What is the weekend response target?",
       "passed": true,
-      "seconds": 6.45,
-      "answer": "No weekend response target is specified. [S2]",
+      "seconds": 7.79,
+      "answer": "No weekend response target is specified. [S1]",
       "sources": [
         {
-          "document_id": "56ee38962309426e8cf0cf4ee0f52c1d",
+          "document_id": "bd3d31ee762c441bb8aa03a4634d9c95",
           "name": "plans.docx",
           "location": "Paragraph 2",
           "text": "Targets apply on business days. No weekend response target is specified.",
           "score": 0.9064,
-          "label": "S2"
+          "label": "S1"
         }
       ],
       "mode": "generated",
-      "elapsed_ms": 6442,
-      "review": "Exact cited statement of missing policy; accepted without changing model output."
+      "elapsed_ms": 7781
     },
     {
       "file": "returns.pdf",
       "question": "How long do I have to request an equipment return?",
       "passed": true,
-      "seconds": 4.39,
-      "answer": "14 days from delivery [S1]",
+      "seconds": 7.24,
+      "answer": "Equipment returns must be requested within 14 days of delivery. [S1]",
       "sources": [
         {
-          "document_id": "0723e42a15fb4b168a4ea6cae621613d",
+          "document_id": "9c3e812a006d4772bb74e013048fccc3",
           "name": "returns.pdf",
           "location": "Page 1",
           "text": "Equipment returns must be requested within 14 days of delivery.",
@@ -78,17 +77,17 @@
         }
       ],
       "mode": "generated",
-      "elapsed_ms": 4382
+      "elapsed_ms": 7240
     },
     {
       "file": "returns.pdf",
       "question": "What do I need before shipping equipment back?",
       "passed": true,
-      "seconds": 4.78,
+      "seconds": 6.94,
       "answer": "A return authorization number is required before shipping equipment back. [S1]",
       "sources": [
         {
-          "document_id": "0723e42a15fb4b168a4ea6cae621613d",
+          "document_id": "9c3e812a006d4772bb74e013048fccc3",
           "name": "returns.pdf",
           "location": "Page 2",
           "text": "A return authorization number is required before shipping equipment back.",
@@ -97,27 +96,27 @@
         }
       ],
       "mode": "generated",
-      "elapsed_ms": 4776
+      "elapsed_ms": 6937
     },
     {
       "file": "returns.pdf",
       "question": "What is the equipment refund amount?",
       "passed": true,
-      "seconds": 1.55,
+      "seconds": 1.59,
       "answer": "I couldn't find enough evidence in your documents to answer that question.",
       "sources": [],
       "mode": "abstained",
-      "elapsed_ms": 1547
+      "elapsed_ms": 1590
     },
     {
       "file": "access.txt",
       "question": "How long is a visitor badge valid?",
       "passed": true,
-      "seconds": 4.88,
+      "seconds": 7.39,
       "answer": "Visitor badges expire after 72 hours. [S1]",
       "sources": [
         {
-          "document_id": "63cfa87db21749328e9c928021cd390a",
+          "document_id": "fa4f60eae165426dab4c856602a10300",
           "name": "access.txt",
           "location": "Section 1",
           "text": "Visitor badges expire after 72 hours.",
@@ -126,17 +125,17 @@
         }
       ],
       "mode": "generated",
-      "elapsed_ms": 4878
+      "elapsed_ms": 7382
     },
     {
       "file": "access.txt",
       "question": "where do visitors check in",
       "passed": true,
-      "seconds": 4.41,
+      "seconds": 6.56,
       "answer": "Visitors check in at reception [S1]",
       "sources": [
         {
-          "document_id": "63cfa87db21749328e9c928021cd390a",
+          "document_id": "fa4f60eae165426dab4c856602a10300",
           "name": "access.txt",
           "location": "Section 2",
           "text": "Visitors must check in at reception before entering the lab.",
@@ -145,27 +144,27 @@
         }
       ],
       "mode": "generated",
-      "elapsed_ms": 4401
+      "elapsed_ms": 6557
     },
     {
       "file": "access.txt",
       "question": "What does a visitor badge cost?",
       "passed": true,
-      "seconds": 1.85,
+      "seconds": 2.33,
       "answer": "I couldn't find enough evidence in your documents to answer that question.",
       "sources": [],
       "mode": "abstained",
-      "elapsed_ms": 1841
+      "elapsed_ms": 2328
     },
     {
       "file": "handbook.txt",
       "question": "when does employee earn vacation",
       "passed": true,
-      "seconds": 7.47,
+      "seconds": 10.29,
       "answer": "Vacation becomes available after six months of employment [S1]",
       "sources": [
         {
-          "document_id": "c7552b7295774765bb7b9212bc6beba6",
+          "document_id": "0e6e7c66fbcc434a9bed0363dc710890",
           "name": "handbook.txt",
           "location": "Section 2",
           "text": "ANNUAL LEAVE\nFull-time employees receive 20 paid vacation days per calendar year. Vacation becomes available after six months of employment. Up to five unused vacation days may be carried into the following year. Submit vacation requests through the HR portal at least two weeks in advance. Requests require approval from your manager.",
@@ -174,29 +173,27 @@
         }
       ],
       "mode": "generated",
-      "elapsed_ms": 7467
+      "elapsed_ms": 10282
     },
     {
       "file": "handbook.txt",
       "question": "How many vacation days accrue per month?",
       "passed": true,
-      "seconds": 1.89,
+      "seconds": 3.07,
       "answer": "I couldn't find enough evidence in your documents to answer that question.",
       "sources": [],
       "mode": "abstained",
-      "elapsed_ms": 1881
+      "elapsed_ms": 3066
     },
     {
       "file": "handbook.txt",
       "question": "What year was Northstar Studio founded?",
       "passed": true,
-      "seconds": 1.59,
+      "seconds": 1.97,
       "answer": "I couldn't find enough evidence in your documents to answer that question.",
       "sources": [],
       "mode": "abstained",
-      "elapsed_ms": 1585
+      "elapsed_ms": 1965
     }
-  ],
-  "initial_passed": 11,
-  "review_note": "One initially flagged answer exactly quoted the cited statement that no weekend target is specified. Acceptance now includes this safe explicit-absence answer; inference outputs are unchanged."
+  ]
 }

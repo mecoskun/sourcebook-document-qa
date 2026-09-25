@@ -1,0 +1,332 @@
+{
+  "public_fixture": {
+    "url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1300.pdf",
+    "sha256": "1e77c1bd63d1e15c48c870b7c17b7c9a2edf6bd5103b0940e72828515c9f1881",
+    "pages": 9
+  },
+  "note": "Pattern/location checks require human review; safe refusal is allowed only on flagged cases. No general accuracy claim.",
+  "cases": 13,
+  "passed": 13,
+  "results": [
+    {
+      "group": "public_pdf",
+      "question": "List all six CSF Functions.",
+      "passed": true,
+      "expected_patterns": [
+        "govern",
+        "identify",
+        "protect",
+        "detect",
+        "respond",
+        "recover"
+      ],
+      "expected_locations": [
+        "Page 2"
+      ],
+      "may_abstain": false,
+      "seconds": 33.13,
+      "answer": "The CSF Functions are Govern, Identify, Protect, Detect, Respond, and Recover. [S1]",
+      "sources": [
+        {
+          "document_id": "ddef8607c37b46d1a034a338a59775e7",
+          "name": "NIST.SP.1300.pdf",
+          "location": "Page 2",
+          "text": "anaging cybersecurity risks. This supplement and the full CSF 2.0 can help\norganizations to consider and record their own risk tolerances, priorities, threats, \nvulnerabilities, requirements, etc.\nGetting Started with the Cybersecurity Framework\nThe CSF organizes cybersecurity outcomes into six high-level Functions: Govern, Identify, Protect, Detect, Respond, and \nRecover. TheseFunctions, when considered together, provide a comprehensive view of managing cybersecurity risk. The \nactivities listed for each Function within this guide may offer a good starting point for your business. For specific, action-\noriented examples of how to achieve the listed activities, reference the CSF 2.0 Implementation Examples. If there are \nactivities contained within this guide that you do not understand or do not feel comfortable addressing yourself, this guide \ncan serve as a discussion prompt with whomever you have chosen to help you reduce your cybersecurity risks, such as a \nmanaged security",
+          "score": 0.8332,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 33128
+    },
+    {
+      "group": "public_pdf",
+      "question": "What does the guide recommend doing with data backups?",
+      "passed": true,
+      "expected_patterns": [
+        "back",
+        "test"
+      ],
+      "expected_locations": [
+        "Page 5"
+      ],
+      "may_abstain": false,
+      "seconds": 36.5,
+      "answer": "Prioritize regularly backing up your data and testing your backups. [S1] [S2]",
+      "sources": [
+        {
+          "document_id": "ddef8607c37b46d1a034a338a59775e7",
+          "name": "NIST.SP.1300.pdf",
+          "location": "Page 5",
+          "text": "PR.PS-02)\n\u2022 Prioritize regularly backing up your data and testing your backups. (PR.DS-11)\n\u2022 Prioritize configuring your tablets and laptops to enable full-disk encryption to \nprotect data. (PR.DS-01)\nCommunicate\n\u2022 Communicate to your staff how to recognize common attacks, report attacks or \nsuspicious activity, and perform basic cyber hygiene tasks. (PR.AT-01/02)\nGetting Started with Protecting Your Business\nEnabling multi-factor authentication (MFA) is one of the fastest, cheapest ways you can protect \nyour data. Start with accounts that can access the most sensitive information. Use this checklist to \ngive you a head start, but remember your own list will be longer than this:\nAccount MFA Enabled (Y/N)\nBanking Account(s)\nAccounting and Tax Account(s)\nMerchant Account(s)\nGoogle, Microsoft, and/or Apple ID Account(s)\nEmail Account(s)\nPassword Manager(s)\nWebsite Account(s)\nTechnical Deep Dive: NIST Digital Identity Guidelines\nQuestions to Consider\n\u2022 Ar e we restricting access and",
+          "score": 0.8245,
+          "label": "S1"
+        },
+        {
+          "document_id": "ddef8607c37b46d1a034a338a59775e7",
+          "name": "NIST.SP.1300.pdf",
+          "location": "Page 5",
+          "text": "PROTECT\nThe Protect Function supports your ability to use safeguards to prevent or reduce cybersecurity risks.\nActions to Consider\nUnderstand\n\u2022 Understand what information employees should or do have access to. Restrict \nsensitive information access to only those employees who need it to do their \njobs. (PR.AA-05)\nAssess\n\u2022 Assess the timeliness, quality, and frequency of your company\u2019s cybersecurity \ntraining for employees. (PR.AT-01/02)\nPrioritize\n\u2022 Prioritize requiring multi-factor authentication on all accounts that offer it and \nconsider using password managers to help you and your staff generate and \nprotect strong passwords. (PR.AA-03)\n\u2022 Prioritize changing default manufacturer passwords. (PR.AA-01)\n\u2022 Prioritize regularly updating and patching software and operating systems. \nEnable automatic updates to help you remember. (PR.PS-02)\n\u2022 Prioritize regularly backing up your data and testing your backups. (PR.DS-11)\n\u2022 Prioritize configuring your tablets and laptops to enable",
+          "score": 0.8101,
+          "label": "S2"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 36499
+    },
+    {
+      "group": "public_pdf",
+      "question": "Give two common indicators of a cybersecurity incident.",
+      "passed": true,
+      "expected_patterns": [
+        "login|access|sluggish|antivirus|traffic|email"
+      ],
+      "expected_locations": [
+        "Page 6"
+      ],
+      "may_abstain": false,
+      "seconds": 35.01,
+      "answer": "Loss of usual access to data, applications, or services [S1]\n\nUnusually sluggish network [S1]",
+      "sources": [
+        {
+          "document_id": "ddef8607c37b46d1a034a338a59775e7",
+          "name": "NIST.SP.1300.pdf",
+          "location": "Page 6",
+          "text": "t responder, such as an MSSP , about \nthe relevant details from the incident to help them analyze and mitigate \nit. (DE.AE-06/07)\nGetting Started with Detecting Incidents\nSome common indicators of a cybersecurity incident are:\n\u2022 Loss of usual access to data, applications, or services\n\u2022 Unusually sluggish network\n\u2022 Antivirus software alerts when it detects that a host is infected with malware\n\u2022 Multiple failed login attempts \n\u2022 An email administrator sees many bo unced emails with suspicious content\n\u2022 A network administrator notices an unusual deviation from typical network traffic flows\nTec\nhnical Deep Dive: NIST Computer Security Incident Handling Guide\nQuestions to Consider\n\u2022 Do  devices that are used for our business, whether business -ow ned or employee-owned, \nhave antivirus software installed?\n\u2022 Do employees know how to detect possible cybersecurity attacks and how to report them?\n\u2022 How is our business monitoring its logs and alerts to detect potential cyber incidents?\nRel\nated",
+          "score": 0.8896,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 35006
+    },
+    {
+      "group": "public_pdf",
+      "question": "What should be checked before backed-up data is used for restoration?",
+      "passed": true,
+      "expected_patterns": [
+        "integrity"
+      ],
+      "expected_locations": [
+        "Page 8"
+      ],
+      "may_abstain": false,
+      "seconds": 40.78,
+      "answer": "Assess the integrity of your backed-up data and assets before using them for restoration. [S1]",
+      "sources": [
+        {
+          "document_id": "ddef8607c37b46d1a034a338a59775e7",
+          "name": "NIST.SP.1300.pdf",
+          "location": "Page 8",
+          "text": "RECOVER\nThe Recover Function involves activities to restore assets and operations that were impacted by a cybersecurity incident.\nActions to Consider\nUnderstand\n\u2022 Understand who within and outside your business has recovery responsibilities. \n(RC.RP-01)\nAssess\n\u2022 Assess what happened by preparing an after-action report\u2014on your own or in \nconsultation with a vendor/partner\u2014that documents the incident, the response \nand recovery actions taken, and lessons learned. (RC.RP-06)\n\u2022 Assess the integrity of your backed-up data and assets before using them for \nrestoration. (RC.RP-03)\nPrioritize\n\u2022 Prioritize your recovery actions based on organizational needs, resources, and \nassets impacted. (RC.RP-02)\nCommunicate\n\u2022 Communicate regularly and securely with internal and external stakeholders. \n(RC.CO)\n\u2022 Communicate and document completion of the incident and resumption of \nnormal activities. (RC.RP-06)\nGetting Started with a Recovery Playbook\nA \nplaybook typically includes the following critical",
+          "score": 0.825,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 40771
+    },
+    {
+      "group": "public_pdf",
+      "question": "How does a Current Profile differ from a Target Profile?",
+      "passed": true,
+      "expected_patterns": [
+        "current",
+        "target"
+      ],
+      "expected_locations": [
+        "Page 9"
+      ],
+      "may_abstain": false,
+      "seconds": 41.13,
+      "answer": "A Current Profile specifies the desired outcomes an organization is currently achieving and characterizes how or to what extent each outcome is being achieved, while a Target Profile specifies the outcomes an organization has selected and prioritized for achieving its cybersecurity risk management objectives. [S2]",
+      "sources": [
+        {
+          "document_id": "ddef8607c37b46d1a034a338a59775e7",
+          "name": "NIST.SP.1300.pdf",
+          "location": "Page 9",
+          "text": "Profiles and Additional Resources\nUsing Organizational Profiles to Implement the Cybersecurity Framework \nA CSF Organizational Profile describes an organization\u2019s current and/or target cybersecurity posture in terms of the CSF Core\u2019s cybersecurity outcomes. Every Organizational Profile includes \none or both of the following:\n1. A C urrent Profile specifies the desired outcomes an organization is currently achieving (or attempting to achieve) and characterizes how or to what extent each outcome is being \nachieved. \n2. A T arget Profile specifies the outcomes an organization has selected and prioritized for achieving its cybersecurity risk management objectives.\n\u2022 You can also use a Community Profile a s the basis for your Target Profile. A Community Profile is a baseline of targeted outcomes for a particular sector, technology, threat \ntype, or other use case.\n\u2022 You can also choose to use the CSF Tiers t o inform your Profile creation. Tiers characterize the current or targeted rigor",
+          "score": 0.8173,
+          "label": "S2"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 41122
+    },
+    {
+      "group": "public_pdf",
+      "question": "How much does the cybersecurity insurance policy cost per month?",
+      "passed": true,
+      "expected_patterns": [],
+      "expected_locations": [],
+      "may_abstain": true,
+      "seconds": 16.01,
+      "answer": "I couldn't find enough evidence in your documents to answer that question.",
+      "sources": [],
+      "mode": "abstained",
+      "elapsed_ms": 16006
+    },
+    {
+      "group": "public_pdf",
+      "question": "What should we do with backups regularly, and what should we check before restoring them?",
+      "passed": true,
+      "expected_patterns": [
+        "test",
+        "integrity"
+      ],
+      "expected_locations": [
+        "Page 5",
+        "Page 8"
+      ],
+      "may_abstain": false,
+      "seconds": 46.7,
+      "answer": "Regularly back up your data and test your backups. [S1] [S3]\n\nCheck the integrity of your backed-up data before using them for restoration. [S4]",
+      "sources": [
+        {
+          "document_id": "ddef8607c37b46d1a034a338a59775e7",
+          "name": "NIST.SP.1300.pdf",
+          "location": "Page 5",
+          "text": "PROTECT\nThe Protect Function supports your ability to use safeguards to prevent or reduce cybersecurity risks.\nActions to Consider\nUnderstand\n\u2022 Understand what information employees should or do have access to. Restrict \nsensitive information access to only those employees who need it to do their \njobs. (PR.AA-05)\nAssess\n\u2022 Assess the timeliness, quality, and frequency of your company\u2019s cybersecurity \ntraining for employees. (PR.AT-01/02)\nPrioritize\n\u2022 Prioritize requiring multi-factor authentication on all accounts that offer it and \nconsider using password managers to help you and your staff generate and \nprotect strong passwords. (PR.AA-03)\n\u2022 Prioritize changing default manufacturer passwords. (PR.AA-01)\n\u2022 Prioritize regularly updating and patching software and operating systems. \nEnable automatic updates to help you remember. (PR.PS-02)\n\u2022 Prioritize regularly backing up your data and testing your backups. (PR.DS-11)\n\u2022 Prioritize configuring your tablets and laptops to enable",
+          "score": 0.8121,
+          "label": "S1"
+        },
+        {
+          "document_id": "ddef8607c37b46d1a034a338a59775e7",
+          "name": "NIST.SP.1300.pdf",
+          "location": "Page 5",
+          "text": "PR.PS-02)\n\u2022 Prioritize regularly backing up your data and testing your backups. (PR.DS-11)\n\u2022 Prioritize configuring your tablets and laptops to enable full-disk encryption to \nprotect data. (PR.DS-01)\nCommunicate\n\u2022 Communicate to your staff how to recognize common attacks, report attacks or \nsuspicious activity, and perform basic cyber hygiene tasks. (PR.AT-01/02)\nGetting Started with Protecting Your Business\nEnabling multi-factor authentication (MFA) is one of the fastest, cheapest ways you can protect \nyour data. Start with accounts that can access the most sensitive information. Use this checklist to \ngive you a head start, but remember your own list will be longer than this:\nAccount MFA Enabled (Y/N)\nBanking Account(s)\nAccounting and Tax Account(s)\nMerchant Account(s)\nGoogle, Microsoft, and/or Apple ID Account(s)\nEmail Account(s)\nPassword Manager(s)\nWebsite Account(s)\nTechnical Deep Dive: NIST Digital Identity Guidelines\nQuestions to Consider\n\u2022 Ar e we restricting access and",
+          "score": 0.8095,
+          "label": "S3"
+        },
+        {
+          "document_id": "ddef8607c37b46d1a034a338a59775e7",
+          "name": "NIST.SP.1300.pdf",
+          "location": "Page 8",
+          "text": "RECOVER\nThe Recover Function involves activities to restore assets and operations that were impacted by a cybersecurity incident.\nActions to Consider\nUnderstand\n\u2022 Understand who within and outside your business has recovery responsibilities. \n(RC.RP-01)\nAssess\n\u2022 Assess what happened by preparing an after-action report\u2014on your own or in \nconsultation with a vendor/partner\u2014that documents the incident, the response \nand recovery actions taken, and lessons learned. (RC.RP-06)\n\u2022 Assess the integrity of your backed-up data and assets before using them for \nrestoration. (RC.RP-03)\nPrioritize\n\u2022 Prioritize your recovery actions based on organizational needs, resources, and \nassets impacted. (RC.RP-02)\nCommunicate\n\u2022 Communicate regularly and securely with internal and external stakeholders. \n(RC.CO)\n\u2022 Communicate and document completion of the incident and resumption of \nnormal activities. (RC.RP-06)\nGetting Started with a Recovery Playbook\nA \nplaybook typically includes the following critical",
+          "score": 0.801,
+          "label": "S4"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 46690
+    },
+    {
+      "group": "conflicting_sources",
+      "question": "How many paid vacation days do full-time employees receive?",
+      "passed": true,
+      "expected_patterns": [
+        "20",
+        "25",
+        "conflict|differ|inconsisten|disagree"
+      ],
+      "expected_locations": [],
+      "may_abstain": true,
+      "seconds": 16.27,
+      "answer": "I found related passages, but could not verify a complete, consistent answer. Try one specific question or name the document to use.",
+      "sources": [],
+      "mode": "abstained",
+      "reason": "verification_failed",
+      "elapsed_ms": 16270
+    },
+    {
+      "group": "conflicting_sources",
+      "question": "According to alpha.txt, how many vacation days do full-time employees receive?",
+      "passed": true,
+      "expected_patterns": [
+        "20"
+      ],
+      "expected_locations": [],
+      "may_abstain": false,
+      "seconds": 8.38,
+      "answer": "Full-time employees receive 20 paid vacation days per year. [S1]",
+      "sources": [
+        {
+          "document_id": "c78c6e51192345058938663558098ce8",
+          "name": "alpha.txt",
+          "location": "Section 1",
+          "text": "Company vacation policy: Full-time employees receive 20 paid vacation days per year.",
+          "score": 0.9261,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 8375
+    },
+    {
+      "group": "long_docx",
+      "question": "How long are laboratory visitor badges valid, and do visitors need an escort?",
+      "passed": true,
+      "expected_patterns": [
+        "72|seventy-two",
+        "escort"
+      ],
+      "expected_locations": [],
+      "may_abstain": false,
+      "seconds": 9.72,
+      "answer": "Laboratory visitor badges expire after 72 hours and visitors require an escort. [S1]",
+      "sources": [
+        {
+          "document_id": "f686978807fc4bf791870a5c654f7ab5",
+          "name": "operations.docx",
+          "location": "Paragraph 73",
+          "text": "Laboratory visitors require an escort. Visitor badges expire after 72 hours. The laboratory opens at 8 AM on weekdays.",
+          "score": 0.9397,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 9711
+    },
+    {
+      "group": "long_docx",
+      "question": "When does the laboratory open on weekdays?",
+      "passed": true,
+      "expected_patterns": [
+        "8|eight"
+      ],
+      "expected_locations": [],
+      "may_abstain": false,
+      "seconds": 7.39,
+      "answer": "The laboratory opens at 8 AM on weekdays. [S1]",
+      "sources": [
+        {
+          "document_id": "f686978807fc4bf791870a5c654f7ab5",
+          "name": "operations.docx",
+          "location": "Paragraph 73",
+          "text": "Laboratory visitors require an escort. Visitor badges expire after 72 hours. The laboratory opens at 8 AM on weekdays.",
+          "score": 0.8847,
+          "label": "S1"
+        }
+      ],
+      "mode": "generated",
+      "elapsed_ms": 7388
+    },
+    {
+      "group": "long_docx",
+      "question": "What is the Sunday laboratory opening time?",
+      "passed": true,
+      "expected_patterns": [],
+      "expected_locations": [],
+      "may_abstain": true,
+      "seconds": 2.38,
+      "answer": "I couldn't find enough evidence in your documents to answer that question.",
+      "sources": [],
+      "mode": "abstained",
+      "elapsed_ms": 2376
+    },
+    {
+      "group": "long_docx",
+      "question": "When does it open?",
+      "passed": true,
+      "expected_patterns": [],
+      "expected_locations": [],
+      "may_abstain": true,
+      "seconds": 0.01,
+      "answer": "Which place, item, or policy do you mean? Please name it in your question; each question is answered independently.",
+      "sources": [],
+      "mode": "abstained",
+      "reason": "clarification_needed",
+      "elapsed_ms": 7
+    }
+  ]
+}

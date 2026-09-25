@@ -45,6 +45,10 @@ def extract(data: bytes, filename: str) -> list[dict]:
                 if "word/document.xml" not in archive.namelist():
                     raise ValueError("This does not appear to be a DOCX file.")
             document = Document(io.BytesIO(data))
+            if document.element.xpath(".//w:tc/w:tcPr/w:gridSpan[@w:val!='1'] | "
+                                      ".//w:tc/w:tcPr/w:vMerge | .//w:tc/w:tbl"):
+                raise ValueError("DOCX merged or nested tables are not supported reliably. "
+                                 "Simplify the tables or upload a plain-text version.")
             # Preserve body order and table headers so values retain their context.
             sections = []
             paragraph_number = table_number = 0

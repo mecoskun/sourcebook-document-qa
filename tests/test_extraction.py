@@ -71,3 +71,19 @@ def test_docx_table_header_context_and_body_order():
     sections = extract(output.getvalue(), "plans.docx")
     assert [s["location"] for s in sections] == ["Paragraph 1", "Table 1, row 2", "Table 1, row 3", "Paragraph 2"]
     assert sections[2]["text"] == "Plan | Response time\nPriority | 4 hours"
+
+
+@pytest.mark.parametrize("kind", ["horizontal", "vertical", "nested"])
+def test_rejects_complex_docx_tables_instead_of_silently_losing_context(kind):
+    document = Document()
+    table = document.add_table(rows=2, cols=2)
+    if kind == "horizontal":
+        table.cell(0, 0).merge(table.cell(0, 1)).text = "Combined heading"
+    elif kind == "vertical":
+        table.cell(0, 0).merge(table.cell(1, 0)).text = "Combined category"
+    else:
+        table.cell(0, 0).add_table(rows=1, cols=1).cell(0, 0).text = "Critical nested policy"
+    output = io.BytesIO()
+    document.save(output)
+    with pytest.raises(ValueError, match="merged or nested"):
+        extract(output.getvalue(), "complex.docx")
