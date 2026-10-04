@@ -1,9 +1,9 @@
 # Portfolio roadmap and resume notes
 
-Updated: 2026-09-25. The bounded pre-hosting reliability pass is complete. Step 2 is next; no hosting has been purchased.
+Updated: 2026-10-03. Step 1 is complete for the bounded demo; step 2 comparison/planning is active. No hosting has been purchased.
 
 1. **Document Q&A reliability (completed for the portfolio-demo scope):** broaden wording and document-format checks; improve uncertainty handling; record failures and limitations.
-2. **Choose shared CPU hosting (next):** benchmark response time and memory, compare providers against the initial USD 20–30/month target before purchase. The 4B model measured about 5.3 GB locally; allow OS/API headroom.
+2. **Choose shared CPU hosting (active; comparison prepared):** benchmark response time and memory, compare providers against the initial USD 20–30/month target before purchase. The 4B model measured about 5.3 GB locally; allow OS/API headroom.
 3. **Enable live public Q&A (pending):** deploy HTTPS backend, configure usage controls, connect the GitHub Pages interface.
 4. **Portfolio polish (pending):** screenshots, architecture, examples, limitations, setup instructions.
 5. **YouTube summarizer (pending):** separate project/repository, existing transcripts only; no audio/video processing. Reuse the shared model, MCP management, deployment, and usage controls.
@@ -32,3 +32,7 @@ Implemented hybrid retrieval, explicit handling of short context-dependent quest
 The handbook rerun exposed one unsupported founding-year answer (19/20). Prompt guidance alone did not resolve it; the failed runs are preserved. A deterministic missing-origin-evidence guard now refuses that question. Four targeted API date checks passed, including the original handbook question and positive controls for explicit effective/founding dates. We did not rerun all other model cases after this final narrow guard; their preceding results remain separately dated evidence, not a single new all-cases score.
 
 Read PREHOSTING_REVIEW.md for limits and verification details. This is sufficient to proceed to hosting benchmarking for a bounded portfolio demo, not a guarantee of production accuracy. Next: compare CPU plans against the budget and measure memory/latency before committing. Deployment, portfolio polish, and YouTube remain pending.
+
+## Hosting preference and shortlist, 2026-10-03
+
+User prefers US hosting. See HOSTING_PLAN.md. OVHcloud US VPS-3 (12 GB) is the first benchmark candidate, subject to an actual month-to-month quote and stock confirmation. Advertised starting prices use annual prepayment; no purchase or hosted benchmark is complete. Next action: account availability and checkout quote.
